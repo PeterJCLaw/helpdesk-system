@@ -30,6 +30,7 @@ class TicketDetailRedirectView(RedirectView):
 class TeamListView(LoginRequiredMixin, SingleTableMixin, FilterView):
     model = Team
     table_class = TeamTable
+    table_pagination = False
     filterset_class = TeamFilterset
 
 class TeamDetailAboutView(LoginRequiredMixin, DetailView):
